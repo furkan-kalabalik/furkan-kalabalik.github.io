@@ -1,0 +1,190 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+  --color1: #1a0859;
+  --color2: #4218d9;
+  --color3: #3a15bf;
+  --color4: #f21905;
+  --white: #f2f2f2;
+  --black: #0d0d0d;
+  --font-size: 1.3rem;
+  --mono: 'Roboto', monospace;
+  --sans: Roboto, sans-serif;
+  --oswald: 'Oswald', sans-serif;
+  --anton: 'Anton', sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: white;
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--color4);
+  text-decoration: none;
+}
+
+.gradient {
+  background: radial-gradient(
+    circle,
+    rgba(66, 24, 217, 1) 0%,
+    rgba(242, 25, 5, 1) 100%
+  );
+  height: 2px;
+}
+
+/*Intro styles*/
+#intro {
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-family: var(--oswald);
+  font-size: 1rem;
+}
+
+.name span {
+  font-family: var(--anton);
+  font-size: 4rem;
+  display: block;
+  color: var(--white);
+}
+
+#intro h2 {
+  font-size: 4rem;
+}
+
+/* contact styles */
+#contact {
+  padding-bottom: 1rem;
+  background-color: var(--color2);
+}
+
+#contact div {
+  padding: 3em;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+/*Nav*/
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--anton);
+}
+
+nav i:first-child {
+  color: var(--color2);
+  font-size: 100%;
+}
+
+nav [class*='fa-'] {
+  font-size: 150%;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover {
+  color: var(--color2);
+}
+
+.button {
+  background-color: var(--color4);
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+/*footer*/
+footer {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+footer ul {
+  padding: 0;
+  margin: 2rem 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  font-size: 3rem;
+}
+
+footer ul li a {
+  color: var(--color2);
+}
